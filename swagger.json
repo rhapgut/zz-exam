@@ -1,0 +1,85 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "ZZ Exam",
+    "description": "ZZ Exam"
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "paths": {
+    
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "description": "SQL: User",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "email": {
+          "type": "string",
+          "description": "Unique"
+        },
+        "role_id": {
+          "type": "integer"
+        },
+        "full_name": {
+          "type" : "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Role": {
+      "type": "object",
+      "description": "SQL: User Role",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "PhoneNumber": {
+      "type": "object",
+      "description" : "SQL: User Phone Numbers",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "user_id": {
+          "type": "integer"
+        },
+        "number": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
